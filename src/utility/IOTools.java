@@ -9,7 +9,7 @@ enum inputTypeEnum {
 }
 
 public class IOTools {
-    private Scanner in = new Scanner(System.in);
+    private final Scanner in = new Scanner(System.in);
 
     public IOTools print(String text) {
         System.out.print(text);
@@ -29,7 +29,7 @@ public class IOTools {
         }
     }
 
-    public String inputString() throws ExceptionHandler {
+    public String inputString() {
         return (String) this.input(inputTypeEnum.STRING);
     }
 
@@ -37,7 +37,6 @@ public class IOTools {
         return switch (type) {
             case STRING -> this.in.next();
             case INT -> this.in.nextInt();
-            default -> throw new IllegalArgumentException("Invalid input type");
         };
     }
 }

@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Menu {
-    private IOTools io = new IOTools();
-    private static List<IApp> menus = new ArrayList<>();
+    private final IOTools io = new IOTools();
+    private static final List<IApp> menus = new ArrayList<>();
 
     public static void add(IApp app) {
         menus.add(app);

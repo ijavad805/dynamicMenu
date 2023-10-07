@@ -4,7 +4,7 @@ import utility.IOTools;
 import utility.Menu.IApp;
 
 public class HowItsWorkApp implements IApp {
-    private IOTools io = new IOTools();
+    private final IOTools io = new IOTools();
     public String appName() {
         return "Documentation";
     }

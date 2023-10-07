@@ -1,6 +1,6 @@
 package utility.Menu;
 
 public interface IApp {
-    public String appName ();
+    String appName();
     void run();
 }
