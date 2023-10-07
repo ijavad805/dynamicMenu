@@ -10,20 +10,20 @@ public class Main {
     private static final IOTools io = new IOTools();
 
     public static void main(String[] args) {
-        try {
-            pipeline();
-        } catch (ExceptionHandler exceptionHandler) {
-            io.print("****** ERROR ****** " + exceptionHandler.getMessage());
-        }
+        pipeline();
     }
 
-    public static void pipeline() throws ExceptionHandler {
+    public static void pipeline() {
         new InitializeApps();
         showWelcome();
 
         while (true) {
-            showAndChooseFromMenu();
-            showAppEnded();
+            try {
+                showAndChooseFromMenu();
+                showAppEnded();
+            } catch (ExceptionHandler exceptionHandler) {
+                io.print("****** ERROR ****** " + exceptionHandler.getMessage());
+            }
         }
     }
 
